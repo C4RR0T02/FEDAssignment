@@ -1,0 +1,93 @@
+﻿/*----------Main----------*/
+html {
+    max-width: 95%;
+    margin: auto, auto;
+    padding-left: 80px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body{
+    background-color:black;
+    color:white;
+    width:98.8%;
+
+}
+/*Custom Font*/
+/*Turn up*/
+@font-face {
+    font-family: 'turnupregular';
+    src: url('../fonts/turnup-webfont.woff2') format('woff2'), url('turnup-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/*Scarface*/
+@font-face {
+    font-family: 'scarfaceregular';
+    src: url('../fonts/scarface-webfont.woff2') format('woff2'), url('scarface-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+/*----------Font Changes----------*/
+.turn{
+    font-family:turnupregular;
+    color:red;
+}
+.scar{
+    font-family:scarfaceregular;
+    color:red;
+    font-size:3em;
+}
+/*----------Font Changes----------*/
+.col-sm-6{
+    color:black;
+}
+h1{
+    text-align:center;
+}
+h3{
+    color:white;
+}
+h6 {
+    color: white;
+    font-weight:bold;
+}
+.col-sm-12{
+    padding-right:0px;
+}
+img{
+    height:350px;
+    width:auto;
+}
+#carouselimages{
+    padding-bottom:10px;
+}
+fieldset{
+    border: 1px solid white;
+    background-color: grey;
+    color: black;
+}
+table, tr,td{
+    border:1px solid white;
+    color:white;
+    text-align:center;
+}
+th{
+    color:white;
+    text-align:center;
+}
+
+.special {
+    color: red;
+}
+p {
+    color: white;
+}
+
+#confirm {
+    background-size: 100% 100%;
+}
+
+footer > p{
+    text-align:center;
+}

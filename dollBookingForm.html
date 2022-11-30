@@ -1,0 +1,112 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <meta name="author" content="Tan Yee Ming" />
+    <meta name="description" content="Doll island Booking Form" />
+    <title>Doll Island Booking</title>
+    <!--Reference to CSS (for bootstrap)-->
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <!--Reference to Javascript (for bootstrap)-->
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+    <!--Script to include to include HTML page in one (Header/Footer) -->
+    <script src="https://www.w3schools.com/lib/w3.js"></script>
+
+    <!--Link to Javascript-->
+    <script src="js/doll-island.js"></script>
+
+    <!--Link to CSS-->
+    <link rel="stylesheet" href="css/dollBooking-styles.css">
+</head>
+<body>
+    <div class="container">
+        <!--Header-->
+        <div class="row">
+            <div class="col-md-12">
+                <div w3-include-html="header.html"></div>
+            </div>
+        </div>
+
+
+        <!--Form-->
+        <form onsubmit="showFinalMessage(); return false;" onreset="clearMessage()">
+            <h1 id="book">Booking for the Doll island Tour</h1>
+            <fieldset>
+                <legend>Your Details:</legend>
+                <label class="lb">Name:</label>
+                <input type="text" id="name" required />
+                <br /><br />
+                <label class="lb">Email:</label>
+                <input type="email" id="email" required />
+                <br /><br />
+                <label class="lb">Phone Number:</label>
+                <input id="phone" type="text" pattern="[6,8,9]+[0-9]*" maxlength="8" />
+                <br /><br />
+            </fieldset>
+            <fieldset>
+                <legend>Tickets:</legend>
+                <!--Adult/Child-->
+                <label>Adult:</label>
+                <input id="noadult" type="number" min="1" max="20" value="0" onchange="CalculateCost()" required />
+                <br /><br />
+                <label>Child:</label>
+                <input id="nochild" type="number" min="0" max="20" value="0" onchange="CalculateCost()" required />
+                <br /><br />
+                <!--Date-->
+                <label class="lb">Date:</label>
+                <input id="dated" type="date" min="2022-01-05" max="2022-01-10" onclick="DateTime()" onchange="DisplayDate()" required />
+                <br /><br />
+
+                <label class="lb">Timeslot:</label>
+                <input type="radio" name="timeslot" onchange="DisplayDate()" required />
+                <label>10am-12pm</label>
+                <input type="radio" name="timeslot" onchange="DisplayDate()" required />
+                <label>1pm-3pm</label>
+
+            </fieldset>
+            <br />
+            <br />
+            <!--Final Booking Detail-->
+            <fieldset>
+                <legend>Confirmation of Booking Detail</legend>
+                <p class="result" id="Rprice">Number of people not selected</p>
+                <p class="result" id="Rdate">No date selected</p>
+                <p class="result" id="Rthank"></p>
+            </fieldset>
+            <br />
+            <!-- Buttons-->
+            <input type="submit" id="submit" />
+            <input type="reset" id="reset" onclick="clearMessage()" />
+            <br /><br />
+        </form>
+    </div>
+
+    <br /><br /><br>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-12">
+                <br />
+                <footer>Done by Tan Yee Ming</footer>
+            </div>
+        </div>
+    </div>
+
+    <!--Footer-->
+    <div class="row">
+        <div class="col-md-12">
+            <div w3-include-html="footer.html"></div>
+        </div>
+    </div>
+
+    <!--Include Script-->
+    <script>
+        w3.includeHTML();
+    </script>
+
+</body>
+</html>

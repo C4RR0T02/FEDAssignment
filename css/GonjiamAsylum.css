@@ -1,0 +1,76 @@
+﻿html {
+    max-width: 95%;
+    margin: auto, auto;
+    padding-left: 80px;
+    background-color: black;
+}
+
+body {
+    background-color: black;
+    color: white;
+}
+
+@font-face {
+    font-family: 'turnupregular';
+    src: url('../fonts/turnup-webfont.woff2') format('woff2'), url('turnup-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'scarfaceregular';
+    src: url('../fonts/scarface-webfont.woff2') format('woff2'), url('scarface-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+img {
+    width: 500px;
+    height: auto
+}
+
+h1{
+    text-align:center;
+}
+
+.turnup {
+    font-family: turnupregular;
+    color: red;
+}
+
+.scar {
+    font-family:scarfaceregular;
+    color:red;
+}
+
+table, td {
+    border: 1px solid white;
+    color: white;
+    text-align: center;
+}
+
+table{
+    height:100%;
+    width:100%;
+    padding-bottom: 10px;
+}
+th {
+    color: white;
+    text-align: center;
+}
+
+fieldset{
+    border: 1px solid white;
+    background-color: grey;
+    color: black;
+}
+
+carouselpics{
+    padding-bottom:10px;
+}
+
+footer {
+    color: white;
+    text-align: center;
+    font-style: italic;
+    font-size: 10px;
+}

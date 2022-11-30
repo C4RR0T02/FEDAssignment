@@ -1,0 +1,69 @@
+﻿body{
+    background:black;
+}
+
+@font-face {
+    font-family: 'turnupregular';
+    src: url('../fonts/turnup-webfont.woff2') format('woff2'), url('turnup-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+form {
+    padding: 10px;
+    border: 10px solid darkred;
+}
+
+fieldset{
+    padding:10px;
+}
+
+html{
+    background-color:black;
+}
+
+label,legend,p{
+    color:white;
+}
+
+#book{
+    text-align:center;
+    font-family:turnupregular;
+    color:white;
+    padding:10px;
+}
+
+#submit{
+    border:1px solid forestgreen;
+    padding:5px 10px 5px 10px;
+    float:right;
+    background:none;
+    color:white;
+}
+
+#submit:hover {
+    background-color: forestgreen;
+    border:none;
+    padding:5px 10px 5px 10px;
+}
+
+#reset {
+    border: 1px solid crimson;
+    padding: 5px 10px 5px 10px;
+    float: left;
+    background: none;
+    color: white;
+}
+
+#reset:hover{
+    background-color: crimson;
+    border:none;
+    padding:5px 10px 5px 10px;
+}
+
+footer {
+    color: white;
+    text-align: center;
+    font-style: italic;
+    font-size: 10px;
+}

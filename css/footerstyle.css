@@ -1,0 +1,65 @@
+﻿/*Custom Font*/
+/*Turn up*/
+@font-face {
+    font-family: 'turnupregular';
+    src: url('../fonts/turnup-webfont.woff2') format('woff2'), url('turnup-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/*Scarface*/
+@font-face {
+    font-family: 'scarfaceregular';
+    src: url('../fonts/scarface-webfont.woff2') format('woff2'), url('scarface-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
+footer{
+    background-color:black;
+    
+}
+
+
+hr{
+    height:1px;
+    background-color:red;
+    border:none;
+}
+
+#hand{
+    height:8vw;
+    width:10vw;
+}
+
+.footerinfo{
+    text-align:center;
+}
+
+
+#company {
+    padding-top: 1vw;
+    font-family: turnupregular;
+    color:crimson;
+    font-size:4.5vw;
+}
+
+.option{
+    text-align:right;
+}
+
+#copyright{
+    color:white;
+}
+
+a{
+    color:lightskyblue;
+}
+
+a:hover{
+    color:crimson;
+}
+
+

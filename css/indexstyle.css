@@ -1,0 +1,52 @@
+﻿html {
+    background-color: black;
+    max-width: 95%;
+    margin: auto, auto;
+    padding-left: 80px;
+}
+
+@font-face {
+    font-family: 'scarfaceregular';
+    src: url('../fonts/scarface-webfont.woff2') format('woff2'), url('scarface-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'turnupregular';
+    src: url('../fonts/turnup-webfont.woff2') format('woff2'), url('turnup-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    background-color: black;
+}
+
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+    background-color: black;
+}
+p{
+    color:white;
+}
+
+#heading {
+    font-size: xx-large;
+    color: red;
+    text-align: center;
+    font-family: turnupregular;
+}
+
+#question {
+    text-align: center;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+#text {
+    font-size: 16px;
+}

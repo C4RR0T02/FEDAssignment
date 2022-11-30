@@ -1,0 +1,246 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <meta name="author" content="Tan Yee Ming" />
+    <meta name="description" content="Doll island" />
+    <title>Doll Island</title>
+    <!--Reference to CSS (for bootstrap)-->
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <!--Reference to Javascript (for bootstrap)-->
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+    <!--Script to include to include HTML page in one (Header/Footer) -->
+    <script src="https://www.w3schools.com/lib/w3.js"></script>
+
+    <!--Link to CSS-->
+    <link rel="stylesheet" href="css/doll-island.css">
+
+</head>
+
+<body>
+    <!--Noise onload--> <!--Requires user to change google chrome settings-->
+    <audio autoplay loop>
+        <source src="media/doll/happytune.mp3" type="audio/mp3" />
+    </audio>
+
+    <div class="container-fluid">
+        <!--Header-->
+        <div class="row">
+            <div class="col-md-12">
+                <div w3-include-html="header.html"></div>
+            </div>
+        </div>
+        <br />
+        <!--First Row-->
+        <div class="row">
+            <div class="col-md-12">
+                <img id="sus" src="media/doll/island-of-the-dolls-bridge-and-dolls.jpg" alt="A simple wood house with dolls hung on it." class="img-fluid px-2 mx-auto d-block" />
+                <div id="welcome" class="position-absolute">La Isla de las Munecas</div>
+            </div>
+        </div>
+        <br /><br />
+              <div class="row ">
+                  <div class="mx-auto">
+                      <a href="#information"><img src="media/doll/bloodstain.png" id="stain" /></a>
+                  </div>
+              </div>
+        
+        <br /><br />
+
+        <hr />
+        <h1 id="information">Information</h1>
+        <br />
+
+        <!--Second Row-->
+        <div class="row">
+
+            <!--History-->
+            <div class="col-md-8 mx-auto" id="history">
+                <div class="history">
+                    <br />
+                    <blockquote cite="https://allthatsinteresting.com/island-of-the-dolls#12">
+                        "A beautiful patch of land by day,<p id="text1">a haunting island of whispering dolls by night."</p>
+                    </blockquote>
+                    <p id="text2">
+                        Just south of Mexico City, you'll find la Isla de las Muñecas, a haunted island where countless decaying dolls hang in the trees.
+                        While the exact number of decaying dolls hasn't been recorded, the story of how the island came to be overrun with dolls is far more intriguing. As legend has it, the first doll was hung when the island's sole inhabitant found the corpse of a drowned girl and her doll.
+
+                        Fearing vengeance from the girl's spirit, he hung up her doll as a kind of offering. Then, worried one doll wouldn't satisfy the spirit, he continued to collect and hang dolls for decades, until the day of his eerie death — the same exact location where the girl drowned.
+                        Since then, ghost hunters and locals have claimed that the dolls were possessed, often coming alive during night time to speak amongst themselves, or lure unassumming tourists to play with them.
+                        Today the Island of the Dolls is a popular, albeit macabre, sightseeing attraction. Tucked away some 11 miles from the heart of Mexico City, a visit to the island is just a winding riverboat ride away.
+
+                    </p>
+                    <br />
+                    <citation>
+                        Information from <a href="https://allthatsinteresting.com/island-of-the-dolls#12">AllThatsInteresting</a>
+                    </citation>
+                    <br /><br />
+                </div>
+            </div>
+            <br /><br /><br />
+
+
+            <!--Doll Follow-->
+            <div class="col-sm-4">
+                <img src="media/doll/doll-follow-final.png" id="dollfollow" />
+
+                <!--eyes-->
+                <div class="eyes">
+                    <div class="eye">
+                        <div class="ball"></div>
+                    </div>
+
+                    <div class="eye">
+                        <div class="ball"></div>
+                    </div>
+
+                    <script>
+                        var balls = document.getElementsByClassName("ball");
+                        document.onmousemove = function () {
+                            var x = event.clientX * 100 / window.innerWidth + "%";
+                            var y = event.clientY * 100 / window.innerHeight + "%";
+                            //event.clientX => get the horizontal coordinate of the mouse
+                            //event.clientY => get the Vertical coordinate of the mouse
+                            //window.innerWidth => get the browser width
+                            //window.innerHeight => get the browser height
+
+                            for (var i = 0; i < 2; i++) {
+                                balls[i].style.left = x;
+                                balls[i].style.top = y;
+                                balls[i].style.transform = "translate(-" + x + ",-" + y + ")";
+                            }
+                        }
+                    </script>
+
+                </div>
+            </div>
+        </div>
+
+        <br /><br /><br />
+        <hr />
+        <h1>Tour Details</h1><br />
+        <!--Third Row, for Table and Carousel-->
+        <div class="row">
+            <div class="col-sm-6">
+                <!--Carousel-->
+                <section id="carousel">
+                    <div id="carouselExampleIndicators" class="carousel slide carousel-fade" data-ride="carousel">
+                        <ol class="carousel-indicators">
+                            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                            <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+                            <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
+                        </ol>
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img class="d-block w-100" src="media/doll/bloody-island-of-the-dolls-doll.jpg" alt="Fourth slide">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <h5>Decapitated dolls beckoning visitors to play with it</h5>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img class="d-block w-100" src="media/doll/new-and-old-island-of-the-dolls-dolls.jpg" alt="First slide">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <h5>Dolls watching visitors pass by</h5>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img class="d-block w-100" src="media/doll/baby-doll-on-la-isla-de-las-munecas.jpg" alt="Fourth slide">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <h5>Multiple sources claimed that this baby doll was possessed due to its high EMF</h5>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img class="d-block w-100" src="media/doll/three-la-isla-de-las-munecas-dolls.jpg" alt="Second slide">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <h5>Headless dolls hang out on the trees</h5>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img class="d-block w-100" src="media/doll/island-of-the-dolls-head.jpg" alt="Third slide">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <h5>Limbless dolls are a common sight</h5>
+                                </div>
+                            </div>
+
+                        </div>
+                        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                    </div>
+                </section>
+            </div>
+
+            <!--Table-->
+            <div class="col-sm-6" id="tour">
+                <h2 id="text3">La Isla de las Munecas Tour</h2>
+                <p id="text4">Come join us to uncover the secrets of the world's only doll island...Includes a short boat ride to and from the island, guided tour of the island of dolls and a doll set as a peace offering before stepping upon the island.</p>
+                <table border="1">
+                    <caption id="pricing">Pricing<p id="money">(in SGD)</p></caption>
+                    <tr class="hl">
+                        <th>Timings</th>
+                        <td  colspan="2">Mon-Fri (10am to 12pm / 1pm to 3pm)</td>
+                    </tr>
+                    <tr>
+                        <th rowspan="3">Price</th>
+                        <td >Adult</td>
+                        <td>$75</td>
+                    </tr>
+                    <tr>
+                        <td>Children (below 12)</td>
+                        <td>$50</td>
+                    </tr>
+                    <tr>
+                        <td>Infant (below 1)</td>
+                        <td>Free</td>
+                    </tr>
+                    <tr class="hl">
+                        <th>Pick up location</th>
+                        <td colspan="2">Embarcadero Cuemanco or from Embarcadero Fernando Celada</td>
+                    </tr>
+                </table>
+                <br />
+                <!--Note-->
+                <p id="text5">*The doll set is included as it is said that without it, the doll spirits on the island will not be appeased.</p>
+                <!--Button to form-->
+                <a type="button" class="btn btn-danger" href="dollBookingForm.html">Book Now!</a>
+            </div>
+        </div>
+    </div>
+
+    <br /><br />
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-12">
+                <br />
+                <footer>Done by Tan Yee Ming</footer>
+            </div>
+        </div>
+    </div>
+
+
+    <!--Footer-->
+    <div class="row">
+        <div class="col-md-12">
+            <div w3-include-html="footer.html"></div>
+        </div>
+    </div>
+
+    <!--Include Script-->
+    <script>
+        w3.includeHTML();
+    </script>
+</body>
+</html>

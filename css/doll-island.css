@@ -1,0 +1,203 @@
+﻿/*Background Styles*/
+html {
+    max-width: 95%;
+    margin: auto, auto;
+    padding-left: 80px;
+    scroll-behavior:smooth;
+}
+
+body
+{
+    background-color:black;
+}
+
+
+/*Custom Font*/
+/*Turn up*/
+@font-face {
+    font-family: 'turnupregular';
+    src: url('../fonts/turnup-webfont.woff2') format('woff2'), url('turnup-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/*Scarface*/
+@font-face {
+    font-family: 'scarfaceregular';
+    src: url('../fonts/scarface-webfont.woff2') format('woff2'), url('scarface-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+/*Doll island text in spanish*/
+#welcome{
+    top:35%;
+    left:25%;
+    font-size:7vw;
+    color:red;
+    font-family:scarfaceregular;
+    font-weight:bold;
+
+}
+
+#sus {
+    filter: brightness(65%);
+}
+
+#stain{
+    width:70px;
+    height:70px;
+}
+
+
+h1 {
+    text-align: center;
+    color:red;
+    font-family:scarfaceregular;
+    font-size:13vh;
+
+}
+
+/*Blockquote*/
+blockquote{
+    font-size:35px;
+    color:white;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+citation {
+    color: white;
+}
+
+
+#text1 {
+    color:red;
+    font-family:turnupregular;
+}
+
+#text2{
+    color:white;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/*info*/
+
+/*History*/
+.history{
+    border:3px solid white;
+    border-width:thin;
+    border-radius:5px;
+    padding-left:10px;
+    padding-right:10px;
+    padding-bottom:10px;
+}
+
+
+
+
+/*Doll Following*/
+#dollfollow{
+    filter:grayscale(100%);
+    z-index:2;
+    padding-left:60px;
+    padding-top:40px;
+}
+
+.ball {
+    width: 10px;
+    height: 10px;
+    background: red;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border-radius: 80%;
+    border: 2px solid darkred;
+}
+
+.eyes {
+    position: absolute;
+    top: 9.1vw;
+    transform: translateY(-50%);
+    width: 26vw;
+    text-align: center;
+}
+
+.eye {
+    width: 1.1vw;
+    height: 1.1vw;
+    background: black;
+    display: inline-block;
+    margin-left: 15px;
+    border-radius: 50%;
+    position: relative;
+    overflow: hidden;
+    object-position: 50% 31%;
+    z-index: 1;
+}
+
+/*Pricing,Tour table part*/
+#tour{
+    padding-left:90px;
+}
+
+/*h2*/
+#text3, #text4{
+    color:white;
+}
+
+#text3{
+    font-family:turnupregular;
+}
+
+/*Caption*/
+#pricing{
+    font-size:25px;
+    font-family:turnupregular;
+}
+
+#money{
+    font-size:10px;
+
+}
+
+/*Table Styling*/
+table{
+    border-color:white;
+    width:60%;
+    color:white;
+}
+
+/*Row Colour*/
+tr:nth-child(odd) {
+    background-color: darkred;
+}
+
+/*Padding*/
+th,td{
+    padding:10px;
+    text-align:left;
+}
+
+caption {
+    caption-side: top;
+    color:white;
+}
+
+#text5{
+    font-weight:bold;
+    color:crimson;
+}
+
+h5{
+    background-color:black;
+    opacity:0.7;
+}
+
+footer{
+    color:white;
+    text-align:center;
+    font-style:italic;
+    font-size:10px;
+}

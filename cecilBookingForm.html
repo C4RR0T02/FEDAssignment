@@ -1,0 +1,173 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <meta name="author" content="Ngui Jia Le Sherlena" />
+    <meta name="description" content="Booking form for Cecil Hotel" />
+    <title>Booking for Cecil Hotel</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <!--Script to include to include HTML page in one-->
+    <script src="https://www.w3schools.com/lib/w3.js"></script>
+
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/cecilHotel.css">
+
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/cecilHotel.js" defer></script>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-12">
+                <header>
+                    <div w3-include-html="header.html" id="header"></div>
+                    <h1>The Cecil Hotel</h1>
+                </header>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <br />
+                            <form onsubmit="submitForm()" return false id="bookingform">
+                                <fieldset>
+                                    <legend id="details">Personal Details</legend>
+                                    <p>
+                                        <label class="labelAlign">Name:&nbsp;</label>
+                                        <input type="text" required id="name" placeholder="Enter your name" />
+                                        <label class="labelAlign">&nbsp;&nbsp;Age*:&nbsp;</label>
+                                        <input type="number" required id="age" max="80" min="18" />
+                                    </p>
+                                    <p>
+                                        <label class="labelAlign">Contact Number:&nbsp;</label>
+                                        <input type="tel" required maxlength="8" pattern="[89]\d{7}" size="8" id="contact" />
+                                        <label class="labelAlign">&nbsp;&nbsp;Contact Email:&nbsp;</label>
+                                        <input type="email" required id="email" placeholder="Enter your email" />
+                                    </p>
+                                    <p>
+                                        <label class="labelAlign">Number of Adults:&nbsp;</label>
+                                        <input type="number" required id="adults" default value="1" max="20" min="1" onclick="determineCost()" />
+                                        <label class="labelAlign">&nbsp;&nbsp;Number of Children:&nbsp;</label>
+                                        <input type="number" required id="child" default value="0" max="20" min="0" onclick="determineCost()" />
+                                    </p>
+                                    <p>
+                                        <label class="labelAlign">Date of Tour:</label>
+                                        <input type="date" name="tourdate" placeholder="mm/dd/yy" required id="tourdate" onload="" min="" max="" onchange="getDate()" />
+                                    </p>
+                                </fieldset>
+                                <fieldset id="equipmentinformation">
+                                    <legend>Equipment Rental</legend>
+                                    <label>Select equipment to rent:&nbsp;</label>
+                                    <input type="checkbox" id="KII Meter" name="equipment" value="1" onclick="equipmentrental(); determineCost()" />
+                                    <label for="KII">KII Meter</label>
+                                    <input type="checkbox" id="REM Pod" name="equipment" value="1" onclick="equipmentrental(); determineCost()" />
+                                    <label for="rempod">REM Pod</label>
+                                    <input type="checkbox" id="Catballs" name="equipment" value="1" onclick="equipmentrental(); determineCost()" />
+                                    <label for="catball">Catballs</label>
+                                    <input type="checkbox" id="Spirit Box" name="equipment" value="1" onclick="equipmentrental(); determineCost()" />
+                                    <label for="spiritbox">Spirit Box</label>
+                                    <input type="checkbox" id="Ouija Board" name="equipment" value="1" onclick="equipmentrental(); determineCost()" />
+                                    <label for="ouijaboard">Ouija Board</label>
+                                </fieldset>
+                                <fieldset id="booking Summary">
+                                    <legend>Booking Summary</legend>
+                                    <label id="totalcost" class="bookingSummary"></label>
+                                    <br />
+                                    <label id="dateSelected" class="bookingSummary"></label>
+                                    <br />
+                                    <!--<label id="equipment" class="bookingSummary"></label>-->
+                                </fieldset>
+                                <fieldset id="waiver">
+                                    <br />
+                                    <legend>Waiver Acknowledgment</legend>
+                                    <h3 id="centerhead">
+                                        <b>
+                                            WAIVER OF LIABILITY AND HOLD HARMLESS AGREEMENT FOR
+                                            PARA TRAVELS CECIL HOTEL PARANORMAL INVESTIGATION TOUR
+                                        </b>
+                                    </h3>
+                                    <p>
+                                        1. I am to assume the full risk on the PARA TRAVELS CECIL HOTEL PARANORMAL INVESTIGATION TOUR. <br />
+                                        I hereby RELEASE, WAIVE, DISCHARGE AND COVENANT NOT TO SUE, PARA TRAVELS, their officers, agents, servants, or
+                                        employees (hereinafter referred to as RELEASEES) from any and all liability, claims, demands, actions and
+                                        causes of action whatsoever arising out of or related to any loss, damage, or injury, including death,
+                                        that may be sustained by me, or any of the property belonging to me, WHETHER CAUSED BY THE NEGLIGENCE OF
+                                        THE RELEASEES, or otherwise, while participating in such activity, or while in, on or upon the premises where
+                                        the activity is being conducted. <br /> <br />
+                                        2. I hereby elect to voluntarily participate in said activity with full knowledge that said activity may be hazardous to
+                                        me and my property. I VOLUNTARILY ASSUME FULL RESPONSIBILITY FOR ANY RISKS OF LOSS, PROPERTY
+                                        DAMAGE OR PERSONAL INJURY, INCLUDING DEATH that may be sustained by me, or any loss or damage of
+                                        property owned by me, as a result of being engaged in such activity, WHETHER CAUSED BY THE NEGLIGENCE
+                                        OF RELEASEES OR OTHERWISE. <br /> <br />
+                                        3. I further hereby AGREE TO INDEMNIFY AND HOLD HARMLESS the RELEASEES from any loss, liability,
+                                        damage or costs, including court costs and attorney fees, that they may incur due to my participation in said activity,
+                                        WHETHER CAUSED BY NEGLIGENCE OF RELEASEES or otherwise. <br /> <br />
+                                        4. It is my express intent that this Waiver of Liability and Hold Harmless Agreement shall bind the members of my
+                                        family and spouse, if I am alive, and my heirs, assigns and personal representative, if I am deceased, and shall be
+                                        deemed as a RELEASE, WAIVER, DISCHARGE AND COVENANT NOT TO SUE the above-named RELEASEES. I
+                                        hereby further agree that this Waiver of Liability and Hold Harmless Agreement shall be construed in accordance
+                                        with the laws of the Singapore. <br /> <br />
+                                        5. The RELEASEES are granted the right to use and publish audio, digital, photographs or other recordings of me,
+                                        or in which I may be included, for publicity, educational, advertising and any other purpose or medium without my
+                                        inspection or approval and release them from all claims and liability relating to the above. <br /> <br />
+                                        6. IN SIGNING THIS RELEASE, I ACKNOWLEDGE AND REPRESENT THAT I have read the foregoing Waiver of
+                                        Liability and Hold Harmless Agreement, understand it and sign it voluntarily as my own free act and deed; no oral
+                                        representations, statements, or inducements, apart from the foregoing written agreement, have been made; I am at
+                                        least eighteen (18) years of age and fully competent; and I execute this Release for full, adequate and complete
+                                        consideration fully intending to be bound by same.
+                                    </p>
+                                    <br />
+                                    <input type="checkbox" id="acknowledge" name="acknowledge" value="acknowledge" required />
+                                    <label for="acknowledge">I Acknowlege the Terms and Conditions as per the above clause</label>
+                                </fieldset>
+                                <br />
+                                <p id="disclaimer">* note that you are required to be at least 18 years of age to partake in the tour without a parent</p>
+                                <br />
+                                <label id="finalMessage" class="bookingSummary"></label>
+                                <br />
+                                <input type="submit" />
+                                <input type="reset" onclick="resetForm()" />
+                                <br />
+                                <br />
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br />
+        <br />
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-12">
+                    <a type="button" class="btn btn-danger" href="CecilHotel.html">Back to main page</a>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-12">
+                    <br />
+                    <br />
+                    <footer>Done by Ngui Jia Le Sherlena</footer>
+                </div>
+            </div>
+        </div>
+        <script>
+            w3.includeHTML();
+        </script>
+        <audio id="scary" autoplay loop>
+            <source src="media/cecilHotel/musicbox.mp4" type="audio/mp4">
+        </audio>
+        <br />
+        <br />
+        <div w3-include-html="footer.html" id="footer"></div>
+    </div>
+</body>
+</html>
